@@ -5,7 +5,7 @@ WORKDIR /backend
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONBUFFERED 1
 
-# Install system dependencies
+# Install system dependencies Jeremiah
 RUN apt-get update \
   && apt-get -y install netcat gcc postgresql \
   && apt-get -y install g++ build-essential \
