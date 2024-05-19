@@ -5,10 +5,10 @@ WORKDIR /backend
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONBUFFERED 1
 
-# Install system dependencies Jeremiah
+# install system dependencies Jeremiah
 RUN apt-get update \
   && apt-get -y install netcat gcc postgresql \
-  && apt-get -y install g++ build-essential \
+  && apt-get -y install g++ build-essential   \
   && apt-get -y install python3-dev \
   && apt-get clean
 

@@ -8,7 +8,7 @@ from app.core import config, tasks
 
 def get_application():
     app = FastAPI(title=config.PROJECT_NAME, version=config.VERSION)
-
+    print(config.PROJECT_NAME, config.VERSION)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
