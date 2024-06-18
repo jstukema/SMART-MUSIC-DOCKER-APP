@@ -11,6 +11,6 @@ jobs:
         run: |
           ls -al
           cd backend
-          docker login --username jetuk01 --password ${{ secrets.smart_music_app }} ghcr.io
+          docker login --username jetuk01 --password ${{ secrets.SMART_MUSIC_APP }} ghcr.io
           docker build . --tag ghcr.io/jetuk01/smart-music-app:latest
           docker push ghcr.io/jetuk01/smart-music-app:latest
