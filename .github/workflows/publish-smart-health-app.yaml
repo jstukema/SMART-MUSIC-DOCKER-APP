@@ -1,0 +1,16 @@
+name: Docker Image CI for Smart Music App
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and Push the Image
+        run: |
+          ls -al
+          cd backend
+          docker login --username jetuk01 --password ${{ secrets.smart_music_app }} ghcr.io
+          docker build . --tag ghcr.io/jetuk01/smart-music-app:latest
+          docker push ghcr.io/jetuk01/smart-music-app:latest
